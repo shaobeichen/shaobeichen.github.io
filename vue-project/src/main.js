@@ -5,6 +5,9 @@ import router from './router'
 
 import './assets/main.css'
 
+import Toast from './plugins/toast'
+Vue.use(Toast)
+
 new Vue({
   router,
   render: h => h(App),

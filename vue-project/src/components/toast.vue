@@ -1,14 +1,15 @@
 <template>
-  <div v-if="show" v-html="text" class="toast" />
+  <!-- <div v-if="show" v-html="text" class="toast" /> -->
+  <div v-html="text" class="toast" />
 </template>
 
 <script>
 export default {
   props: {
-    show: {
-      type: Boolean,
-      default: false,
-    },
+    // show: {
+    //   type: Boolean,
+    //   default: false,
+    // },
     text: {
       type: String,
       default: '',
@@ -18,13 +19,23 @@ export default {
       default: 1500,
     },
   },
-  watch: {
-    show(value) {
-      if (value) {
-        setTimeout(() => {
-          this.$emit('update:show', false)
-        }, this.duration)
-      }
+  //   watch: {
+  //     show(value) {
+  //       if (value) {
+  //         setTimeout(() => {
+  //           this.$emit('update:show', false)
+  //         }, this.duration)
+  //       }
+  //     },
+  //   },
+  mounted() {
+    setTimeout(() => {
+      this.close()
+    }, this.duration)
+  },
+  methods: {
+    close() {
+      this.$el.remove()
     },
   },
 }
