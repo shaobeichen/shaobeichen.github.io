@@ -1,14 +1,8 @@
-# vue-project
+# shaobeichen.github.io
 
-This template should help get you started developing with Vue 3 in Vite.
+这是一个演示网站，用于展示在视频中的代码案例。
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+<img width="610" alt="image" src="https://user-images.githubusercontent.com/18715564/216763367-a8296440-5b77-4f58-af85-6876dcfc222d.png">
 
 ## Project Setup
 
@@ -27,9 +21,4 @@ npm run dev
 ```sh
 npm run build
 ```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+ 
