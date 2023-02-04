@@ -1,44 +1,51 @@
 <template>
   <div class="home">
-    <button @click="showToast" class="button">显示提示消息</button>
-    <!-- <toast :show.sync="show" :text="text" /> -->
+    <div class="container">
+      <home-introduce />
+      <div class="list">
+        <home-link v-for="(item, index) in list" :key="index" :item="item" />
+      </div>
+      <copyright />
+    </div>
   </div>
 </template>
 
 <script>
-// import toast from '../components/toast.vue'
+import homeIntroduce from '@/components/home/home-introduce.vue'
+import homeLink from '@/components/home/home-link.vue'
+import copyright from '@/components/footer/copyright.vue'
 
 export default {
-  //   components: {
-  //     toast,
-  //   },
-  //   data() {
-  //     return {
-  //       show: false,
-  //       text: '',
-  //     }
-  //   },
-  methods: {
-    showToast() {
-      //   this.show = true
-      //   this.text = '这是一个提示'
-
-      this.$toast('这是一个命令式调用提示')
-
-      //   this.$toast({
-      //     text: '这是一个命令式调用提示',
-      //     duration: 3000,
-      //   })
-    },
+  components: {
+    homeIntroduce,
+    homeLink,
+    copyright,
+  },
+  data() {
+    return {
+      list: [
+        {
+          link: '/toast',
+          chapter: '第二期',
+          title: '如何实现一个命令式toast组件？',
+        },
+        {
+          link: '/toast',
+          chapter: '第一期',
+          title: '如何2分钟写一个toast组件？',
+        },
+      ],
+    }
   },
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .home {
   width: 100%;
-}
-.button {
-  margin: 10% 40%;
+  .container {
+    max-width: 40%;
+    margin: 0 auto;
+  }
 }
 </style>

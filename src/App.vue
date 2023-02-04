@@ -1,5 +1,9 @@
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <router-view />
 </template>
+
+<style lang="scss">
+body {
+  background-color: $global-bg;
+}
+</style>

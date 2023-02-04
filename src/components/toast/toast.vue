@@ -33,6 +33,9 @@ export default {
       this.close()
     }, this.duration)
   },
+  beforeDestroy() {
+    this.close()
+  },
   methods: {
     close() {
       this.$el.remove()
