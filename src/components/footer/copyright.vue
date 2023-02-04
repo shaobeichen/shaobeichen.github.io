@@ -10,10 +10,6 @@
 
 <style scoped lang="scss">
 .copyright {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   text-align: center;
   background-color: #f7f9fe;
   padding: 20px 0;
