@@ -6,24 +6,29 @@
         <home-link v-for="(item, index) in list" :key="index" :item="item" />
       </div>
     </div>
-    <copyright />
+    <v-footer />
   </div>
 </template>
 
 <script>
 import homeIntroduce from '@/components/home/home-introduce.vue'
 import homeLink from '@/components/home/home-link.vue'
-import copyright from '@/components/footer/copyright.vue'
+import vFooter from '@/components/footer/v-footer.vue'
 
 export default {
   components: {
     homeIntroduce,
     homeLink,
-    copyright,
+    vFooter,
   },
   data() {
     return {
       list: [
+        {
+          link: '/filter',
+          chapter: '第三期',
+          title: '如何优雅的实现价格千位添加逗号？',
+        },
         {
           link: '/toast',
           chapter: '第二期',
