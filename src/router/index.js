@@ -20,6 +20,11 @@ const router = new VueRouter({
       name: 'toast',
       component: () => import('../views/toast.vue'),
     },
+    {
+      path: '/filter',
+      name: 'filter',
+      component: () => import('../views/filter.vue'),
+    },
   ],
 })
 

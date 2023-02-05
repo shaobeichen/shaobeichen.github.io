@@ -28,6 +28,9 @@ export default {
   box-shadow: 0 8px 16px -4px #2c2d300c;
   position: relative;
   padding: 1rem 2rem;
+  &:hover {
+    background: #e3e8f7;
+  }
   .chapter {
     font-weight: bold;
     font-size: 1.2rem;
