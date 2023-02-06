@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: import.meta.env.BASE_URL,
   scrollBehavior() {
     return { left: 0, top: 0 }
