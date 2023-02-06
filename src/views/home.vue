@@ -15,6 +15,8 @@ import homeIntroduce from '@/components/home/home-introduce.vue'
 import homeLink from '@/components/home/home-link.vue'
 import vFooter from '@/components/footer/v-footer.vue'
 
+import list from '@/utils/mocks/home'
+
 export default {
   components: {
     homeIntroduce,
@@ -23,23 +25,7 @@ export default {
   },
   data() {
     return {
-      list: [
-        {
-          link: '/filter',
-          chapter: '第三期',
-          title: '如何优雅的实现价格千位添加逗号？',
-        },
-        {
-          link: '/toast',
-          chapter: '第二期',
-          title: '如何实现一个命令式toast组件？',
-        },
-        {
-          link: '/toast',
-          chapter: '第一期',
-          title: '如何2分钟写一个toast组件？',
-        },
-      ],
+      list,
     }
   },
 }

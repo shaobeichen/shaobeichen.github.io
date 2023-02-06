@@ -25,6 +25,11 @@ const router = new VueRouter({
       name: 'filter',
       component: () => import('../views/filter.vue'),
     },
+    {
+      path: '/onbeforeunload',
+      name: 'onbeforeunload',
+      component: () => import('../views/onbeforeunload.vue'),
+    },
   ],
 })
 
