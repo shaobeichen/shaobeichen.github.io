@@ -1,5 +1,10 @@
 export default [
   {
+    link: '/v-model',
+    chapter: '第五期',
+    title: 'v-model在组件上怎么使用？',
+  },
+  {
     link: '/onbeforeunload',
     chapter: '第四期',
     title: 'Vue如何实现退出前保存？',

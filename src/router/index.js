@@ -30,6 +30,11 @@ const router = new VueRouter({
       name: 'onbeforeunload',
       component: () => import('../views/onbeforeunload.vue'),
     },
+    {
+      path: '/v-model',
+      name: 'v-model',
+      component: () => import('../views/v-model.vue'),
+    },
   ],
 })
 
