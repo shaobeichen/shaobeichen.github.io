@@ -40,6 +40,11 @@ const router = new VueRouter({
       name: 'p5-vmodel',
       component: () => import('../views/p5-vmodel.vue'),
     },
+    {
+      path: '/p7-scale-image',
+      name: 'p7-scale-image',
+      component: () => import('../views/p7-scale-image.vue'),
+    },
   ],
 })
 
