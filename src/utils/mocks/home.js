@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/nocode',
+    chapter: '第八期',
+    tags: ['实战技巧'],
+    title: 'Git代码没写完想切换分支怎么办？',
+  },
+  {
     link: '/p7-scale-image',
     chapter: '第七期',
     tags: ['实战技巧'],

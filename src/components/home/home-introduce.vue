@@ -5,8 +5,19 @@
       <h1 class="title">我是 少北晨</h1>
       <div class="hello">是一名 前端工程师、独立开发者、博主</div>
     </div>
+    <deallink />
   </div>
 </template>
+
+<script>
+import deallink from '@/components/footer/deallink.vue'
+
+export default {
+  components: {
+    deallink,
+  },
+}
+</script>
 
 <style scoped lang="scss">
 .home-introduce {
@@ -18,6 +29,7 @@
   min-height: 200px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: linear-gradient(150deg, rgba(91, 39, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
   margin: 20px 0;
   .hello {

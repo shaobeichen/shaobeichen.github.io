@@ -38,9 +38,10 @@ export default {
   .list {
     display: block;
     .item {
+      margin-left: 6px;
       .item-icon {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         background: white;
         border-radius: 50%;
       }
