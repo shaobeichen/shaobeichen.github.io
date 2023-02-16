@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p9-transform',
+    chapter: '第九期',
+    tags: ['可视化交互'],
+    title: '动画演示CSS transform各属性效果',
+  },
+  {
     link: '/nocode',
     chapter: '第八期',
     tags: ['实战技巧'],
@@ -15,7 +21,7 @@ export default [
     link: '/nocode',
     chapter: '第六期',
     tags: ['科技见闻'],
-    title: 'chatGPT优化代码效果怎么样？',
+    title: 'ChatGPT优化代码效果怎么样？',
   },
   {
     link: '/p5-vmodel',
