@@ -3,8 +3,10 @@
     <div class="text">©2023 By 少北晨</div>
     <div class="text">
       主题参考
-      <a href="https://blog.zhheo.com" target="_blank">HEO</a> 访问量:
-      <img class="pv" src="http://www.web-counter.net/count_20091204.php?c=RuPRWoftwdQ" />
+      <a href="https://blog.zhheo.com" class="link" target="_blank">HEO</a>
+      <span id="busuanzi_container_site_pv">
+        访问量：<span id="busuanzi_value_site_pv"></span>
+      </span>
     </div>
   </div>
 </template>
@@ -17,10 +19,7 @@
   border-top: 1px solid #e3e8f7;
   font-weight: bold;
   .text {
-    .pv {
-      transform: translateY(-2px);
-    }
-    a {
+    .link {
       color: #307af6;
     }
   }
