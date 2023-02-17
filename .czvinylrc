@@ -43,6 +43,7 @@
         }
     ],
     "skipScope": true,
+    "skipTicketId": true,
     "subjectMaxLength": 70,
     "subjectMinLength": 3,
     "typeQuestion": "请选择一个提交类型：",
