@@ -1,14 +1,14 @@
 export default [
   {
-    link: '/p9-transform',
+    link: '/nocode',
     chapter: '第九期',
-    tags: ['可视化交互'],
-    title: '动画演示CSS transform各属性效果',
+    tags: ['Git技巧'],
+    title: 'Git提交错分支了怎么办？',
   },
   {
     link: '/nocode',
     chapter: '第八期',
-    tags: ['实战技巧'],
+    tags: ['Git技巧'],
     title: 'Git代码没写完想切换分支怎么办？',
   },
   {

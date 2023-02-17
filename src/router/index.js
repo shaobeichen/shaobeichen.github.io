@@ -45,6 +45,11 @@ const router = new VueRouter({
       name: 'p7-scale-image',
       component: () => import('../views/p7-scale-image.vue'),
     },
+    {
+      path: '/p10-transform',
+      name: 'p10-transform',
+      component: () => import('../views/p10-transform.vue'),
+    },
   ],
 })
 
