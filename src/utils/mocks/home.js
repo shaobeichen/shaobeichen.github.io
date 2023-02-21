@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/nocode',
+    chapter: '第十三期',
+    tags: ['Git技巧'],
+    title: 'git reset和git revert有什么区别？',
+  },
+  {
     link: '/p12-first-letter',
     chapter: '第十二期',
     tags: ['实战技巧'],
