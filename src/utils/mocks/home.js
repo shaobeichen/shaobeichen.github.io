@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p12-first-letter',
+    chapter: '第十二期',
+    tags: ['实战技巧'],
+    title: '如何优雅实现第一个字放大效果？',
+  },
+  {
     link: '/nocode',
     chapter: '第十一期',
     tags: ['Git技巧'],

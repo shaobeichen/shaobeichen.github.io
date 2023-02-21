@@ -50,6 +50,11 @@ const router = new VueRouter({
       name: 'p10-transform',
       component: () => import('../views/p10-transform.vue'),
     },
+    {
+      path: '/p12-first-letter',
+      name: 'p12-first-letter',
+      component: () => import('../views/p12-first-letter.vue'),
+    },
   ],
 })
 
