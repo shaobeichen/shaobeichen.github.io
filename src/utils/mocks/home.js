@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p14-stepper',
+    chapter: '第十四期',
+    tags: ['自己的组件库'],
+    title: '60秒封装一个购物车加减数量组件',
+  },
+  {
     link: '/nocode',
     chapter: '第十三期',
     tags: ['Git技巧'],

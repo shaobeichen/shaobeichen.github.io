@@ -55,6 +55,11 @@ const router = new VueRouter({
       name: 'p12-first-letter',
       component: () => import('../views/p12-first-letter.vue'),
     },
+    {
+      path: '/p14-stepper',
+      name: 'p14-stepper',
+      component: () => import('../views/p14-stepper.vue'),
+    },
   ],
 })
 
