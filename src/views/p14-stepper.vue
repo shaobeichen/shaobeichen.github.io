@@ -1,6 +1,6 @@
 <template>
   <layout-default>
-    <stepper v-model="number" class="stepper" />
+    <sh-stepper v-model="number" class="stepper" />
   </layout-default>
 </template>
 

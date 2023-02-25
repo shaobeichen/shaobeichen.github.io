@@ -60,6 +60,11 @@ const router = new VueRouter({
       name: 'p14-stepper',
       component: () => import('../views/p14-stepper.vue'),
     },
+    {
+      path: '/p15-vuex',
+      name: 'p15-vuex',
+      component: () => import('../views/p15-vuex.vue'),
+    },
   ],
 })
 

@@ -5,8 +5,8 @@
       <span style="color: #307af6">{{ title }}</span>
     </div>
     <div class="image-box">
-      <scale-image :src="image" class="image" :style="imageStyle" />
-      <scale-image :src="image" class="image-placehold" />
+      <sh-scale-image :src="image" class="image" :style="imageStyle" />
+      <sh-scale-image :src="image" class="image-placehold" />
     </div>
   </div>
 </template>

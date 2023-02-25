@@ -6,23 +6,14 @@
         <home-link v-for="(item, index) in list" :key="index" :item="item" />
       </div>
     </div>
-    <v-footer />
+    <footer-container />
   </div>
 </template>
 
 <script>
-import homeIntroduce from '@/components/home/home-introduce.vue'
-import homeLink from '@/components/home/home-link.vue'
-import vFooter from '@/components/footer/v-footer.vue'
-
 import list from '@/utils/mocks/home'
 
 export default {
-  components: {
-    homeIntroduce,
-    homeLink,
-    vFooter,
-  },
   data() {
     return {
       list,

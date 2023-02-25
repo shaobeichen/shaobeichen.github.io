@@ -1,5 +1,5 @@
 // 绑定命令式toast
-import toast from '../components/toast/toast.vue'
+import toast from '@/components/sh/toast.vue'
 
 export default {
   install(Vue) {

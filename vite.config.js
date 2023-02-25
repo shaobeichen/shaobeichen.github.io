@@ -22,7 +22,7 @@ export default defineConfig({
       extensions: ['vue'],
       deep: true,
       dts: false,
-      directoryAsNamespace: false,
+      directoryAsNamespace: true,
     }),
   ],
   resolve: {

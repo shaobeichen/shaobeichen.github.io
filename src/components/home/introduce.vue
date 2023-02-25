@@ -5,18 +5,12 @@
       <h1 class="title">我是 少北晨</h1>
       <div class="hello">是一名 前端工程师、独立开发者、博主</div>
     </div>
-    <deallink />
+    <footer-deallink />
   </div>
 </template>
 
 <script>
-import deallink from '@/components/footer/deallink.vue'
-
-export default {
-  components: {
-    deallink,
-  },
-}
+export default {}
 </script>
 
 <style scoped lang="scss">

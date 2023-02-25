@@ -1,9 +1,15 @@
 export default [
   {
+    link: '/p15-vuex',
+    chapter: '第十五期',
+    tags: ['实战技巧'],
+    title: 'Vuex是做什么用的？Vuex详解和用法',
+  },
+  {
     link: '/p14-stepper',
     chapter: '第十四期',
     tags: ['自己的组件库'],
-    title: '60秒封装一个购物车加减数量组件',
+    title: 'Vue60秒封装一个购物车加减数量组件',
   },
   {
     link: '/nocode',
