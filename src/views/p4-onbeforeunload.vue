@@ -33,12 +33,7 @@
 </template>
 
 <script>
-import unloadBorder from '@/components/unload/unload-border.vue'
-
 export default {
-  components: {
-    unloadBorder,
-  },
   data() {
     return {
       number: '',
