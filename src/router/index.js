@@ -65,6 +65,11 @@ const router = new VueRouter({
       name: 'p15-vuex',
       component: () => import('../views/p15-vuex.vue'),
     },
+    {
+      path: '/p16-storage',
+      name: 'p16-storage',
+      component: () => import('../views/p16-storage.vue'),
+    },
   ],
 })
 

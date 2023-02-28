@@ -1,9 +1,15 @@
 export default [
   {
+    link: '/p16-storage',
+    chapter: '第十六期',
+    tags: ['实战技巧'],
+    title: '浏览器本地存储的方式有哪些？区别及应用场景？',
+  },
+  {
     link: '/p15-vuex',
     chapter: '第十五期',
     tags: ['实战技巧'],
-    title: 'Vuex是做什么用的？Vuex详解和用法',
+    title: 'Vuex是做什么用的？',
   },
   {
     link: '/p14-stepper',
