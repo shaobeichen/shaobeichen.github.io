@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p17-vuex-storage',
+    chapter: '第十七期',
+    tags: ['实战技巧'],
+    title: 'Vuex刷新页面数据丢失怎么办？如何做数据持久化？',
+  },
+  {
     link: '/p16-storage',
     chapter: '第十六期',
     tags: ['实战技巧'],

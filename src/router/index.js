@@ -70,6 +70,11 @@ const router = new VueRouter({
       name: 'p16-storage',
       component: () => import('../views/p16-storage.vue'),
     },
+    {
+      path: '/p17-vuex-storage',
+      name: 'p17-vuex-storage',
+      component: () => import('../views/p17-vuex-storage.vue'),
+    },
   ],
 })
 
