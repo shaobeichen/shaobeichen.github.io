@@ -1,5 +1,5 @@
 <template>
-  <button class="button" v-bind="$attrs" @click="buttonClick">
+  <button class="button" v-bind="$attrs" @click="click">
     <slot />
   </button>
 </template>
@@ -8,7 +8,7 @@
 export default {
   props: {},
   methods: {
-    buttonClick(e) {
+    click(e) {
       this.$emit('click', e)
     },
   },
@@ -20,11 +20,13 @@ export default {
   margin: 0 auto;
   width: 100px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 0;
   background: #4187f2;
   color: white;
   cursor: pointer;
+  display: block;
+  font-size: 14px;
   &:hover {
     background: #2a589d;
   }

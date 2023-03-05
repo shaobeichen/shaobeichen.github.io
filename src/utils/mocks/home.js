@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p18-storage',
+    chapter: '第十八期',
+    tags: ['实战技巧'],
+    title: 'localStorage怎么设置过期时间？',
+  },
+  {
     link: '/p17-vuex-storage',
     chapter: '第十七期',
     tags: ['实战技巧'],
