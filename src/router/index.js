@@ -80,6 +80,11 @@ const router = new VueRouter({
       name: 'p18-storage',
       component: () => import('../views/p18-storage.vue'),
     },
+    {
+      path: '/p19-dialog',
+      name: 'p19-dialog',
+      component: () => import('../views/p19-dialog.vue'),
+    },
   ],
 })
 

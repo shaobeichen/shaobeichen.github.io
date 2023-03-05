@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="show" class="v-model-dialog">
+    <div v-if="show" class="dialog">
       <div class="mask"></div>
 
       <div class="container">
@@ -24,6 +24,31 @@ export default {
       default: false,
     },
   },
+  watch: {
+    show(value) {
+      if (value) this.disableScroll()
+      else this.enableScroll()
+    },
+  },
+  beforeDestroy() {
+    this.enableScroll()
+  },
+  methods: {
+    disableScroll() {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.paddingRight = scrollbarWidth + 'px'
+
+      // innerWidth 浏览器窗口宽度，包含滚动条
+      // clientWidth 文档根元素的宽度，不包括滚动条
+
+      document.body.style.overflow = 'hidden'
+    },
+    enableScroll() {
+      document.body.style.paddingRight = ''
+
+      document.body.style.overflow = 'auto'
+    },
+  },
 }
 </script>
 
@@ -36,7 +61,7 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
-.v-model-dialog {
+.dialog {
   .mask {
     position: fixed;
     top: 0;
@@ -77,6 +102,7 @@ export default {
       border-radius: 40px;
       border: 0;
       background: #4187f2;
+      font-size: 14px;
       color: white;
       cursor: pointer;
       &:hover {

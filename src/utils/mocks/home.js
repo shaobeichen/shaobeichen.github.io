@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p19-dialog',
+    chapter: '第十九期',
+    tags: ['自己的组件库'],
+    title: 'Vue封装一个弹窗组件要注意哪些点?',
+  },
+  {
     link: '/p18-storage',
     chapter: '第十八期',
     tags: ['实战技巧'],
