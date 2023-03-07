@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/nocode',
+    chapter: '第二十期',
+    tags: ['实战技巧'],
+    title: 'Git提交错分支了怎么办？第二种方式',
+  },
+  {
     link: '/p19-dialog',
     chapter: '第十九期',
     tags: ['自己的组件库'],
