@@ -85,6 +85,11 @@ const router = new VueRouter({
       name: 'p19-dialog',
       component: () => import('../views/p19-dialog.vue'),
     },
+    {
+      path: '/p21-all',
+      name: 'p21-all',
+      component: () => import('../views/p21-all.vue'),
+    },
   ],
 })
 

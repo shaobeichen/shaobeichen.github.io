@@ -1,8 +1,14 @@
 export default [
   {
+    link: '/p21-all',
+    chapter: '第二十一期',
+    tags: ['实战技巧'],
+    title: 'Vue项目中如何同时请求多个接口？附加注意事项',
+  },
+  {
     link: '/nocode',
     chapter: '第二十期',
-    tags: ['实战技巧'],
+    tags: ['Git技巧'],
     title: 'Git提交错分支了怎么办？第二种方式',
   },
   {
