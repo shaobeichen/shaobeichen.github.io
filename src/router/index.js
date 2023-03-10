@@ -90,6 +90,11 @@ const router = new VueRouter({
       name: 'p21-all',
       component: () => import('../views/p21-all.vue'),
     },
+    {
+      path: '/p22-lazy',
+      name: 'p22-lazy',
+      component: () => import('../views/p22-lazy.vue'),
+    },
   ],
 })
 

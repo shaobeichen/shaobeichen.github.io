@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p22-lazy',
+    chapter: '第二十二期',
+    tags: ['自己的组件库'],
+    title: 'Vue怎么做图片懒加载？',
+  },
+  {
     link: '/p21-all',
     chapter: '第二十一期',
     tags: ['实战技巧'],
