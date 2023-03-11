@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/no-code',
+    chapter: '第二十三期',
+    tags: ['实战技巧'],
+    title: '推荐一个查看Vue线上环境数据的开发者插件',
+  },
+  {
     link: '/p22-lazy',
     chapter: '第二十二期',
     tags: ['自己的组件库'],
