@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p24-cors',
+    chapter: '第二十四期',
+    tags: ['实战技巧'],
+    title: 'Vue项目中如何解决开发环境跨域？',
+  },
+  {
     link: '/no-code',
     chapter: '第二十三期',
     tags: ['实战技巧'],

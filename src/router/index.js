@@ -95,6 +95,11 @@ const router = new VueRouter({
       name: 'p22-lazy',
       component: () => import('../views/p22-lazy.vue'),
     },
+    {
+      path: '/p24-cors',
+      name: 'p24-cors',
+      component: () => import('../views/p24-cors.vue'),
+    },
   ],
 })
 
