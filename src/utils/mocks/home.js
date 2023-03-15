@@ -1,6 +1,12 @@
 export default [
   {
     link: '/no-code',
+    chapter: '第二十六期',
+    tags: ['实战技巧'],
+    title: '如何优雅的判断文本以xxx开头？',
+  },
+  {
+    link: '/no-code',
     chapter: '第二十五期',
     tags: ['实战技巧'],
     title: '代码在线运行平台codepen的基础使用',
