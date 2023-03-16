@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p27-half',
+    chapter: '第二十七期',
+    tags: ['实战技巧'],
+    title: 'Vue移动端项目中如何生成一条0.5px的线？',
+  },
+  {
     link: '/no-code',
     chapter: '第二十六期',
     tags: ['实战技巧'],

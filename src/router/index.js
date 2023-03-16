@@ -100,6 +100,11 @@ const router = new VueRouter({
       name: 'p24-cors',
       component: () => import('../views/p24-cors.vue'),
     },
+    {
+      path: '/p27-half',
+      name: 'p27-half',
+      component: () => import('../views/p27-half.vue'),
+    },
   ],
 })
 
