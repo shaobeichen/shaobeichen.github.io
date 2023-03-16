@@ -1,18 +1,20 @@
+import { cookie } from '@/utils/index'
+
 export default {
   namespaced: true,
   state: () => ({
-    userInfo: {},
+    token: '',
   }),
   getters: {
-    loginStatus: state => Boolean(state.userInfo?.token),
+    loginStatus: state => Boolean(state.token),
   },
   mutations: {
-    setUserInfo(state, payload) {
-      state.userInfo = payload
+    setToken(state, payload) {
+      state.token = payload
       if (payload) {
-        localStorage.setItem('userInfo', JSON.stringify(payload))
+        cookie.setItem('token', payload, { expires: 1 })
       } else {
-        localStorage.removeItem('userInfo')
+        cookie.removeItem('token')
       }
     },
   },

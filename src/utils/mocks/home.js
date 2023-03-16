@@ -1,18 +1,24 @@
 export default [
   {
+    link: '/p28-login',
+    chapter: '第二十八期',
+    tags: ['实战技巧'],
+    title: 'Vue项目登录流程是什么样的？token存在哪里？',
+  },
+  {
     link: '/p27-half',
     chapter: '第二十七期',
     tags: ['实战技巧'],
     title: 'Vue移动端项目中如何生成一条0.5px的线？',
   },
   {
-    link: '/no-code',
+    link: '/nocode',
     chapter: '第二十六期',
     tags: ['实战技巧'],
     title: '如何优雅的判断文本以xxx开头？',
   },
   {
-    link: '/no-code',
+    link: '/nocode',
     chapter: '第二十五期',
     tags: ['实战技巧'],
     title: '代码在线运行平台codepen的基础使用',
@@ -24,7 +30,7 @@ export default [
     title: 'Vue项目中如何解决开发环境跨域？',
   },
   {
-    link: '/no-code',
+    link: '/nocode',
     chapter: '第二十三期',
     tags: ['实战技巧'],
     title: '推荐一个查看Vue线上环境数据的开发者插件',

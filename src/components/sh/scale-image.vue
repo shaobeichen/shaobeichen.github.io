@@ -7,6 +7,26 @@
 </template>
 
 <script>
+function lazyBinding(el, binding) {
+  const placehold = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+
+  const { nolazy } = binding.value
+
+  if (nolazy) return (el.src = el.dataset.src || placehold)
+
+  el.src = placehold
+
+  const obServer = new IntersectionObserver(entries => {
+    // 如果 intersectionRatio 为 0，则目标在视野外，
+    // 我们不需要做任何事情。
+    if (entries.find(v => v.intersectionRatio)) {
+      el.src = el.dataset.src || placehold
+      obServer.unobserve(el)
+    }
+  })
+  obServer.observe(el)
+}
+
 export default {
   inheritAttrs: false,
   props: {
@@ -27,22 +47,10 @@ export default {
   directives: {
     lazy: {
       bind(el, binding) {
-        const { nolazy } = binding.value
-        if (nolazy) return (el.src = el.dataset.src)
-
-        const placehold =
-          'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
-        el.src = placehold
-
-        const obServer = new IntersectionObserver(entries => {
-          // 如果 intersectionRatio 为 0，则目标在视野外，
-          // 我们不需要做任何事情。
-          if (entries[0].intersectionRatio <= 0) return
-
-          el.src = el.dataset.src
-          obServer.unobserve(el)
-        })
-        obServer.observe(el)
+        lazyBinding(el, binding)
+      },
+      componentUpdated(el, binding) {
+        lazyBinding(el, binding)
       },
     },
   },
