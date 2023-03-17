@@ -5,6 +5,8 @@
         <sh-scale-image :src="userInfo.head" class="head" />
         <div class="name" v-if="userInfo.name">{{ userInfo.name }}</div>
         <sh-button class="button" @click="logout">退出登录</sh-button>
+        <br />
+        <sh-button class="button" @click="show = true">知识点</sh-button>
       </div>
     </div>
     <sh-dialog v-model="show" title="知识点">
@@ -60,8 +62,6 @@ export default {
 
       if (result) {
         this.userInfo = result
-        await sleep(1500)
-        this.show = true
       }
     },
     async fetchUserInfo() {
