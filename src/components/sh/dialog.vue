@@ -4,8 +4,8 @@
       <div class="mask"></div>
 
       <div class="container">
-        <div class="title">弹窗标题</div>
-        <div class="content">这里是一个弹窗内容，可以编写很多文字。</div>
+        <div class="title">{{ title }}</div>
+        <slot class="content" />
         <button class="button" @click="$emit('change', false)">关闭</button>
       </div>
     </div>
@@ -22,6 +22,10 @@ export default {
     show: {
       type: Boolean,
       default: false,
+    },
+    title: {
+      type: String,
+      default: '',
     },
   },
   watch: {
