@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/no-code',
+    chapter: '第二十九期',
+    tags: ['实战技巧'],
+    title: 'JavaScript隐式类型转换',
+  },
+  {
     link: '/p28-login',
     chapter: '第二十八期',
     tags: ['实战技巧'],
