@@ -3,7 +3,7 @@ export default [
     link: '/no-code',
     chapter: '第二十九期',
     tags: ['实战技巧'],
-    title: 'JavaScript隐式类型转换',
+    title: 'JavaScript隐式类型转换规则，看这一篇就够了',
   },
   {
     link: '/p28-login',
