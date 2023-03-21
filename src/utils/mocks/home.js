@@ -1,6 +1,12 @@
 export default [
   {
-    link: '/no-code',
+    link: '/nocode',
+    chapter: '第三十期',
+    tags: ['实战技巧'],
+    title: 'Vue为什么data是一个函数而不是一个对象？',
+  },
+  {
+    link: '/nocode',
     chapter: '第二十九期',
     tags: ['实战技巧'],
     title: 'JavaScript隐式类型转换规则，看这一篇就够了',
