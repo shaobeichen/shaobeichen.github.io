@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p31-date',
+    chapter: '第三十一期',
+    tags: ['自己的组件库'],
+    title: 'Vue组件库的日期选择组件如何实现？',
+  },
+  {
     link: '/nocode',
     chapter: '第三十期',
     tags: ['实战技巧'],
