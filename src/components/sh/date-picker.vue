@@ -24,20 +24,13 @@
 
 <script>
 /**
- * 知识点
- * 滑动切换
- * 吸附效果
- * 惯性滑动
- * 点击触摸事件冲突
+ * 惯性滑动思路:
+ * 在手指离开屏幕时，如果和上一次move时的间隔小于 设置的惯性时间
+ * 且move距离大于 设置的惯性距离 时，执行惯性滑动
  */
 
-/**
- * 惯性滑动思路:
- * 在手指离开屏幕时，如果和上一次 move 时的间隔小于 `MOMENTUM_TIME` 且 move
- * 距离大于 `MOMENTUM_DISTANCE` 时，执行惯性滑动
- */
 // 惯性时间
-const MOMENTUM_TIME = 300
+const MOMENTUM_TIME = 100
 // 惯性距离
 const MOMENTUM_DISTANCE = 15
 // 默认持续时间
@@ -98,6 +91,9 @@ export default {
     },
   },
   methods: {
+    /**
+     * 基础偏移量，组件一开始默认垂直居中
+     */
     baseOffset() {
       const { optionHeight, options } = this
       return (optionHeight * (options.length - 1)) / 2
@@ -129,7 +125,9 @@ export default {
     onTouchEnd() {
       const { currentOffset, momentumOffset, touchStartTime, optionHeight, options, isMomentum } =
         this
+      // 上一次move的距离
       const distance = currentOffset - momentumOffset
+      // 上一次move的时间
       const duration = Date.now() - touchStartTime
       const startMomentum = duration < MOMENTUM_TIME && Math.abs(distance) > MOMENTUM_DISTANCE
 
@@ -137,7 +135,7 @@ export default {
         const speed = Math.abs(distance / duration)
         const offset = currentOffset + (speed / 0.003) * (distance < 0 ? -1 : 1)
         const finallyOffset = isMomentum ? offset : currentOffset
-        const index = clamp(Math.round(-finallyOffset / optionHeight), 0, options.length - 1)
+        const index = this.getIndexByOffset(finallyOffset)
         this.updateIndex(index)
         return
       }
@@ -172,6 +170,7 @@ export default {
 
 <style lang="scss" scoped>
 .date {
+  position: relative;
   transition-timing-function: cubic-bezier(0.23, 1, 0.68, 1);
   user-select: none;
   overflow: hidden;
@@ -201,6 +200,7 @@ export default {
     width: 80px;
     cursor: grab;
     text-align: center;
+    margin: 0 auto;
     .column-item {
       color: #afafaf;
       &.selected {
