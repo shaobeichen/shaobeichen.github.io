@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p32-nexttick',
+    chapter: '第三十二期',
+    tags: ['嚼碎原理'],
+    title: 'Vue nextTick 为什么会出现？原理是什么？',
+  },
+  {
     link: '/p31-date',
     chapter: '第三十一期',
     tags: ['自己的组件库'],
