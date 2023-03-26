@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p33-flex-shrink',
+    chapter: '第三十三期',
+    tags: ['实战技巧'],
+    title: 'flex布局 用 flex-shrink 避免图片被压扁',
+  },
+  {
     link: '/p32-nexttick',
     chapter: '第三十二期',
     tags: ['嚼碎原理'],
