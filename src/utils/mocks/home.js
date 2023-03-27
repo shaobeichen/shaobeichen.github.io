@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p34-filter',
+    chapter: '第三十四期',
+    tags: ['实战技巧'],
+    title: 'JavaScript 对象里的字段如何筛选？ ',
+  },
+  {
     link: '/p33-flex-shrink',
     chapter: '第三十三期',
     tags: ['实战技巧'],
