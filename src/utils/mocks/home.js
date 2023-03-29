@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p35-model',
+    chapter: '第三十五期',
+    tags: ['嚼碎原理'],
+    title: 'Vue v-model 的原理是什么？',
+  },
+  {
     link: '/p34-filter',
     chapter: '第三十四期',
     tags: ['实战技巧'],
