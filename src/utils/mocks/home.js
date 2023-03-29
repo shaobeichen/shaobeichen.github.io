@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p36-css',
+    chapter: '第三十六期',
+    tags: ['实战技巧'],
+    title: '如何只用CSS就能实现输入框清除按钮动态切换？',
+  },
+  {
     link: '/p35-model',
     chapter: '第三十五期',
     tags: ['嚼碎原理'],
