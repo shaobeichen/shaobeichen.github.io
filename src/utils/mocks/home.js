@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p37-data',
+    chapter: '第三十七期',
+    tags: ['实战技巧'],
+    title: '真实项目中的数据竞态问题及常用解决方案',
+  },
+  {
     link: '/p36-css',
     chapter: '第三十六期',
     tags: ['实战技巧'],
