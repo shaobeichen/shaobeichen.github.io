@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p38-pointer',
+    chapter: '第三十八期',
+    tags: ['实战技巧'],
+    title: 'CSS 模块被遮挡无法点击下方内容怎么办？',
+  },
+  {
     link: '/p37-data',
     chapter: '第三十七期',
     tags: ['实战技巧'],
