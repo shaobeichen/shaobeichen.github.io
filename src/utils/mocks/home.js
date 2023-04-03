@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p39-qrcode',
+    chapter: '第三十九期',
+    tags: ['实战技巧'],
+    title: '前端扫码登录是如何实现的？',
+  },
+  {
     link: '/p38-pointer',
     chapter: '第三十八期',
     tags: ['实战技巧'],
