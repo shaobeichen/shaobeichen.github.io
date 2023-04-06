@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p40-css',
+    chapter: '第四十期',
+    tags: ['实战技巧'],
+    title: 'CSS last-child last-of-type 的区别是什么？',
+  },
+  {
     link: '/p39-qrcode',
     chapter: '第三十九期',
     tags: ['实战技巧'],
