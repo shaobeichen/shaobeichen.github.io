@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p41',
+    chapter: '第四十一期',
+    tags: ['代码柯南'],
+    title: '今天遇到一个离谱的bug - 竖线分割',
+  },
+  {
     link: '/p40-css',
     chapter: '第四十期',
     tags: ['实战技巧'],
