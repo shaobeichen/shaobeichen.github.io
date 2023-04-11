@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p42',
+    chapter: '第四十二期',
+    tags: ['Git技巧'],
+    title: 'Git遇到冲突流程是怎么样的？',
+  },
+  {
     link: '/p41',
     chapter: '第四十一期',
     tags: ['代码柯南'],
