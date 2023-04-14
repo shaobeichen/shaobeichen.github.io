@@ -1,4 +1,22 @@
 export default [
+  //   {
+  //     link: '/nocode',
+  //     chapter: '第四十五期',
+  //     tags: ['实战技巧'],
+  //     title: '前端面试题 谈一谈深拷贝和浅拷贝',
+  //   },
+  {
+    link: '/nocode',
+    chapter: '第四十四期',
+    tags: ['实战技巧'],
+    title: '推荐一款我常用的vscode插件，不用再复制class名',
+  },
+  {
+    link: '/nocode',
+    chapter: '第四十三期',
+    tags: ['实战技巧'],
+    title: '我发现一款不用魔法就能用ChatGPT的软件！速度起飞！',
+  },
   {
     link: '/p42',
     chapter: '第四十二期',
@@ -8,7 +26,7 @@ export default [
   {
     link: '/p41',
     chapter: '第四十一期',
-    tags: ['代码柯南'],
+    tags: ['实战技巧'],
     title: '今天遇到一个离谱的bug - 竖线分割',
   },
   {
