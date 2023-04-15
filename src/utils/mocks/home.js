@@ -1,10 +1,10 @@
 export default [
-  //   {
-  //     link: '/nocode',
-  //     chapter: '第四十五期',
-  //     tags: ['实战技巧'],
-  //     title: '前端面试题 谈一谈深拷贝和浅拷贝',
-  //   },
+  {
+    link: '/nocode',
+    chapter: '第四十五期',
+    tags: ['实战技巧'],
+    title: '前端面试题 谈一谈深拷贝和浅拷贝',
+  },
   {
     link: '/nocode',
     chapter: '第四十四期',
