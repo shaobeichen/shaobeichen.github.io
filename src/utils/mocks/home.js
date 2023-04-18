@@ -1,6 +1,12 @@
 export default [
   {
     link: '/nocode',
+    chapter: '第四十七期',
+    tags: ['实战技巧'],
+    title: '前端在iOS上处理时间要注意什么？',
+  },
+  {
+    link: '/nocode',
     chapter: '第四十六期',
     tags: ['实战技巧'],
     title: '前端如何快速切换本地node版本？',
