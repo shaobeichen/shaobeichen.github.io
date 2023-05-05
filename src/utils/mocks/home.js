@@ -1,6 +1,12 @@
 export default [
   {
     link: '/nocode',
+    chapter: '第四十八期',
+    tags: ['实战技巧'],
+    title: '手把手教你发布一个最简单的npm包',
+  },
+  {
+    link: '/nocode',
     chapter: '第四十七期',
     tags: ['实战技巧'],
     title: '前端在iOS上处理时间要注意什么？',
