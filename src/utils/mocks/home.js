@@ -1,6 +1,12 @@
 export default [
   {
     link: '/nocode',
+    chapter: '第四十九期',
+    tags: ['实战技巧'],
+    title: '前端面试题 一行代码实现一个 sleep 函数',
+  },
+  {
+    link: '/nocode',
     chapter: '第四十八期',
     tags: ['实战技巧'],
     title: '手把手教你发布一个最简单的npm包',
