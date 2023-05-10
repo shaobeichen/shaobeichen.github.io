@@ -1,6 +1,12 @@
 export default [
   {
     link: '/nocode',
+    chapter: '第五十期',
+    tags: ['实战技巧'],
+    title: '为什么不建议你关闭eslint？',
+  },
+  {
+    link: '/nocode',
     chapter: '第四十九期',
     tags: ['实战技巧'],
     title: '前端面试题 一行代码实现一个 sleep 函数',
