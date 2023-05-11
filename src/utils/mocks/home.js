@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p51',
+    chapter: '第五十一期',
+    tags: ['实战技巧'],
+    title: 'Vue组件库的倒计时组件如何实现？',
+  },
+  {
     link: '/nocode',
     chapter: '第五十期',
     tags: ['实战技巧'],
