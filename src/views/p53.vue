@@ -9,7 +9,7 @@
         class="card-item"
         v-for="(item, index) in cardList"
         :key="index"
-        :style="[{ background: item.color }, { height: item.height }]"
+        :style="{ background: item.color, height: item.height }"
       >
         <p class="text">{{ item.id }}</p>
       </div>
@@ -33,7 +33,7 @@ export default {
         { id: 10, color: '#e86c92', height: '90px' },
       ],
       cardList: [],
-      columnHeights: [0, 0, 0], // 每列元素的高度，本例子为3列
+      columnHeights: [0, 0, 0], // 每列元素的高度，本例为3列
     }
   },
   directives: {
@@ -44,21 +44,18 @@ export default {
       },
     },
   },
-  mounted() {
-    this.nextPage()
-  },
   methods: {
+    // 下一页
     nextPage() {
       this.cardList.push(...this.cardData)
     },
+    // 更新布局
     updateLayout(item) {
       const column = this.getMinColumnHeights(this.columnHeights)
 
       const itemTop = this.columnHeights[column]
       const itemLeft = column * item.clientWidth
-      item.style.position = 'absolute'
-      item.style.top = `${itemTop}px`
-      item.style.left = `${itemLeft}px`
+      item.style.transform = `translate(${itemLeft}px, ${itemTop}px)`
 
       //  当前高度加上新增的元素高度
       this.columnHeights[column] += item.offsetHeight
@@ -78,12 +75,15 @@ export default {
   .card {
     position: relative;
     .card-item {
-      width: 300px;
+      width: 200px;
       text-align: center;
       color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }

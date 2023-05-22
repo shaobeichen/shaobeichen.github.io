@@ -3,7 +3,7 @@ export default [
     link: '/p53',
     chapter: '第五十三期',
     tags: ['实战技巧'],
-    title: 'CSS瀑布流是如何实现的？',
+    title: 'Vue中CSS瀑布流是如何实现的？',
   },
   {
     link: '/nocode',
