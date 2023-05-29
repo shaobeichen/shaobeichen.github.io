@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p54',
+    chapter: '第五十四期',
+    tags: ['实战技巧'],
+    title: '两数之和',
+  },
+  {
     link: '/p53',
     chapter: '第五十三期',
     tags: ['实战技巧'],
