@@ -1,5 +1,35 @@
 export default [
   {
+    link: '/p59',
+    chapter: '第五十九期',
+    tags: ['实战技巧'],
+    title: 'Vue项目滑动验证码组件怎么做？(五)',
+  },
+  {
+    link: '/p58',
+    chapter: '第五十八期',
+    tags: ['实战技巧'],
+    title: 'Vue项目滑动验证码组件怎么做？(四)',
+  },
+  {
+    link: '/p57',
+    chapter: '第五十七期',
+    tags: ['实战技巧'],
+    title: 'Vue项目滑动验证码组件怎么做？(三)',
+  },
+  {
+    link: '/p56',
+    chapter: '第五十六期',
+    tags: ['实战技巧'],
+    title: 'Vue项目滑动验证码组件怎么做？(二)',
+  },
+  {
+    link: '/p55',
+    chapter: '第五十五期',
+    tags: ['实战技巧'],
+    title: 'Vue项目滑动验证码组件怎么做？(一)',
+  },
+  {
     link: '/p54',
     chapter: '第五十四期',
     tags: ['实战技巧'],
