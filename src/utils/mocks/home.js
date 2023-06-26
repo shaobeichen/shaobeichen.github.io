@@ -3,7 +3,7 @@ export default [
     link: '/p59',
     chapter: '第五十九期',
     tags: ['实战技巧'],
-    title: 'Vue项目滑动验证码组件怎么做？(五)',
+    title: 'Vue如何实现简单的元素共享效果？',
   },
   {
     link: '/p58',
