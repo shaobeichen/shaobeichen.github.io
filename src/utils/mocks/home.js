@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p60',
+    chapter: '第六十期',
+    tags: ['实战技巧'],
+    title: '浏览器地址栏上也能做动画？',
+  },
+  {
     link: '/p59',
     chapter: '第五十九期',
     tags: ['实战技巧'],
