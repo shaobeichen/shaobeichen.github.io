@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p61',
+    chapter: '第六十一期',
+    tags: ['实战技巧'],
+    title: '大公司里怎样开发和部署前端代码？',
+  },
+  {
     link: '/p60',
     chapter: '第六十期',
     tags: ['实战技巧'],
