@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p63',
+    chapter: '第六十三期',
+    tags: ['开挂的人生'],
+    title: '放弃熬夜，做清晨的霸主',
+  },
+  {
     link: '/p61',
     chapter: '第六十一期',
     tags: ['实战技巧'],

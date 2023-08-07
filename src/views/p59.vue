@@ -8,6 +8,10 @@
       @click="clickEvent"
     >
       <img :src="image" class="image" />
+      <p src="fasdfas" />
+      <p src="fasdfas" />
+      <p src="fasdfas" />
+      <p src="fasdfas" />
     </div>
   </div>
 </template>
@@ -16,8 +20,8 @@
 export default {
   data() {
     return {
-      active: false,
-      activeAfter: false,
+      active: true,
+      activeAfter: true,
       title: '假如宝可梦变成了末世风开放世界',
       image:
         'https://sns-img-hw.xhscdn.com/261822e6-a2cf-bd0a-684a-aad521d93aa5?imageView2/2/h/1920/format/webp|imageMogr2/strip',
