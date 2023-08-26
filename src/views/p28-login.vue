@@ -7,14 +7,13 @@
       <sh-form-item label="验证码">
         <sh-input v-model="code" />
       </sh-form-item>
-      <br />
       <sh-button class="button" @click="login">登录</sh-button>
     </div>
   </layout-default>
 </template>
 
 <script>
-import { cookie, sleep } from '@/utils/index'
+import { sleep } from '@/utils/index'
 import { mapMutations } from 'vuex'
 
 export default {
@@ -26,6 +25,9 @@ export default {
   },
   methods: {
     ...mapMutations('user', ['setToken']),
+    temp() {
+      console.log(11111111)
+    },
     async login() {
       this.$toast('登录中...')
       await sleep(1500)
@@ -34,6 +36,8 @@ export default {
         mobile: this.mobile,
         code: this.code,
       })
+      console.warn('✅ - file: p28-login.vue:36 - login - result:', result)
+      console.log(11, result)
       if (result) {
         this.setToken(result.token)
         this.$router.push('/p28-login-user')
