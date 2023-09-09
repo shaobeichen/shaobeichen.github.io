@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/p73',
+    chapter: '第七十三期',
+    tags: ['实战技巧'],
+    title: 'Vue项目埋点曝光怎么做？',
+  },
+  {
     link: '/p63',
     chapter: '第六十三期',
     tags: ['开挂的人生'],
