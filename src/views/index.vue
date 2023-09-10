@@ -89,7 +89,7 @@ export default {
   background: linear-gradient(180deg, #1c1e1f, #0a0f14);
   color: white;
   .container {
-    width: 425px;
+    width: 375px;
     margin: 0 auto;
     padding: 15px;
     .title {
@@ -117,8 +117,8 @@ export default {
         cursor: pointer;
         border: 0.5px solid #36393b;
         background: #1c1f21;
-        width: 125px;
-        height: 125px;
+        flex: 1;
+        aspect-ratio: 1 / 1;
         border-radius: 20px;
         padding: 15px;
         margin: 0 10px 10px 0;
@@ -150,20 +150,20 @@ export default {
           }
         }
         .icon {
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
           flex-shrink: 0;
           filter: drop-shadow(0 0 5px white);
         }
         .text {
-          font-size: 20px;
+          font-size: 16px;
         }
       }
     }
     .products {
       margin-top: 10px;
       .product-title {
-        font-size: 26px;
+        font-size: 28px;
         margin-bottom: 20px;
       }
       .product-list {
@@ -176,7 +176,7 @@ export default {
           border-radius: 20px;
           padding: 20px;
           margin: 0 0 10px 0;
-          font-size: 30px;
+          font-size: 24px;
           position: relative;
           overflow: hidden;
           &:hover {
