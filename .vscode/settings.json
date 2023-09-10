@@ -1,3 +1,14 @@
 {
-  "cSpell.words": ["pinia", "shaobeichen", "unplugin", "vant"]
+  "cSpell.words": [
+    "adarkroom",
+    "bilibili",
+    "douyin",
+    "pinia",
+    "shaobeichen",
+    "unplugin",
+    "vant"
+  ],
+  "editor.quickSuggestions": {
+    "strings": true
+  }
 }

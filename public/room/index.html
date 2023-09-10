@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html itemscope itemtype="https://schema.org/CreativeWork">
   <head>
     <meta charset="UTF-8" />
@@ -40,10 +40,9 @@
       // try to read "lang" param's from url
       var lang =
         decodeURIComponent(
-          (new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [
-            ,
-            '',
-          ])[1].replace(/\+/g, '%20'),
+          (new RegExp('[?|&]lang=' + '([^&;]+?)(&|#|;|$)').exec(
+            location.search,
+          ) || [, ''])[1].replace(/\+/g, '%20'),
         ) || defaultLang
       // if no language requested, try to read it from local storage
       if (!lang) {
@@ -55,7 +54,9 @@
       if (lang && lang != 'en') {
         document.write('<script src="lang/' + lang + '/strings.js"><\/script>')
         document.write(
-          '<link rel="stylesheet" type="text/css" href="lang/' + lang + '/main.css" \/>',
+          '<link rel="stylesheet" type="text/css" href="lang/' +
+            lang +
+            '/main.css" \/>',
         )
       }
     </script>
