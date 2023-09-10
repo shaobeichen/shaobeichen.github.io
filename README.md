@@ -1,8 +1,8 @@
 # shaobeichen.github.io
 
-这是一个演示网站，用于展示在视频中的代码案例。
+少北晨的个人主页
 
-<img width="610" alt="image" src="https://user-images.githubusercontent.com/18715564/216763367-a8296440-5b77-4f58-af85-6876dcfc222d.png">
+<img width="376" alt="1" src="https://github.com/shaobeichen/shaobeichen.github.io/assets/18715564/fd1830aa-9934-407a-8332-df3187f0f211">
 
 ## Project Setup
 
