@@ -1,7 +1,7 @@
 <template>
   <layout-default>
     <div class="content">
-      <br />
+      <!-- <br />
       <br />
       <br />
       <br />
@@ -13,19 +13,19 @@
       <br />
       <br />
       <sh-image :src="icon[0]" style="transform: translateX(60px)" />
-      <br />
+      <br /> -->
     </div>
   </layout-default>
 </template>
 
 <script>
-import qrcode1 from '@/assets/image/qrcode-1.png'
-import qrcode2 from '@/assets/image/qrcode-2.png'
+// import qrcode1 from '@/assets/image/qrcode-1.png'
+// import qrcode2 from '@/assets/image/qrcode-2.png'
 
 export default {
   data() {
     return {
-      icon: [qrcode1, qrcode2],
+    //   icon: [qrcode1, qrcode2],
     }
   },
 }
