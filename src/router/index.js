@@ -1,7 +1,4 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'
 
 const list = import.meta.glob('@/views/*.vue', { import: 'default', eager: true })
 const routers = Object.keys(list).map(key => {
@@ -13,17 +10,13 @@ const routers = Object.keys(list).map(key => {
   }
 })
 
-const router = new VueRouter({
-  mode: 'hash',
-  base: import.meta.env.BASE_URL,
-  scrollBehavior() {
-    return { left: 0, top: 0 }
-  },
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      name: 'main',
+      name: '/',
       path: '/',
-      component: () => import('../views/home.vue'),
+      component: () => import('../views/index.vue'),
     },
     ...routers,
   ],

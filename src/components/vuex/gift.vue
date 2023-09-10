@@ -1,15 +1,13 @@
 <template>
-  <div class="item" v-if="totalNumber > 1">
-    <sh-scale-image class="image" :src="product.image" />
+  <div class="item">
+    <!-- <sh-scale-image class="image" :src="product.image" />
     <div class="content">
       <div class="title" v-html="product.title" />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   data() {
     return {
@@ -20,9 +18,7 @@ export default {
       },
     }
   },
-  computed: {
-    ...mapState('cart', ['totalNumber']),
-  },
+  computed: {},
 }
 </script>
 

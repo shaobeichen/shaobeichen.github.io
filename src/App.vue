@@ -1,9 +1,9 @@
+<script setup>
+import { RouterView } from 'vue-router'
+</script>
+
 <template>
-  <router-view />
+  <RouterView />
 </template>
 
-<style lang="scss">
-body {
-  background-color: $global-bg;
-}
-</style>
+<style scoped></style>

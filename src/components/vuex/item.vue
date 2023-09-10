@@ -1,17 +1,15 @@
 <template>
   <div class="item">
-    <sh-scale-image class="image" :src="product.image" />
+    <!-- <sh-scale-image class="image" :src="product.image" />
     <div class="content">
       <div class="title" v-html="product.title" />
       <div class="price">{{ product.price | price }}</div>
       <sh-stepper :value="totalNumber" class="stepper" @change="numberChange" />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
-
 export default {
   data() {
     return {
@@ -23,15 +21,8 @@ export default {
       },
     }
   },
-  computed: {
-    ...mapState('cart', ['totalNumber']),
-  },
-  methods: {
-    ...mapMutations('cart', ['setTotalNumber']),
-    numberChange(value) {
-      this.setTotalNumber(value)
-    },
-  },
+  computed: {},
+  methods: {},
 }
 </script>
 

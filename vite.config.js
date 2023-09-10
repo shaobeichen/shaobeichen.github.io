@@ -1,8 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
-import legacy from '@vitejs/plugin-legacy'
-import vue2 from '@vitejs/plugin-vue2'
+import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 
@@ -20,11 +19,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue2(),
-    legacy({
-      targets: ['ie >= 11'],
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
-    }),
+    vue(),
     Components({
       resolvers: [VantResolver()],
       dirs: ['src/components'],
@@ -37,13 +32,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-    },
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "./src/assets/style/variable.scss";`,
-      },
     },
   },
 })
