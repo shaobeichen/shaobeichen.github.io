@@ -105,6 +105,7 @@ export default {
       right: 50px;
       top: 60px;
       width: 50px;
+      opacity: 0.7;
     }
     .title {
       position: relative;
@@ -124,7 +125,6 @@ export default {
       }
     }
     .list {
-      position: relative;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
