@@ -1,6 +1,8 @@
 <template>
   <div class="page">
     <div class="container">
+      <img :src="icon.islands" class="islands" />
+
       <div class="title">
         <div class="welcome">Welcome Back,</div>
         <div class="name">我是少北晨</div>
@@ -14,7 +16,7 @@
           class="item"
           @click="linkTo(item)"
         >
-          <img class="icon" :src="item.icon" :alt="item.text" />
+          <img class="icon" :src="item.icon" />
           <div class="text">{{ item.text }}</div>
         </div>
       </div>
@@ -44,10 +46,14 @@ import douyin from '@/assets/images/douyin.png'
 import bilibili from '@/assets/images/bilibili.png'
 import example from '@/assets/images/example.png'
 import adarkroom from '@/assets/images/adarkroom.jpg'
+import islands from '@/assets/images/islands.gif'
 
 export default {
   data() {
     return {
+      icon: {
+        islands,
+      },
       list: [
         {
           link: '/posts/home',
@@ -89,10 +95,19 @@ export default {
   background: linear-gradient(180deg, #1c1e1f, #0a0f14);
   color: white;
   .container {
+    position: relative;
     width: 375px;
     margin: 0 auto;
     padding: 15px;
+    .islands {
+      position: absolute;
+      z-index: 0;
+      right: 50px;
+      top: 60px;
+      width: 50px;
+    }
     .title {
+      position: relative;
       font-size: 40px;
       font-weight: 500;
       .welcome {
@@ -109,6 +124,7 @@ export default {
       }
     }
     .list {
+      position: relative;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
@@ -161,6 +177,7 @@ export default {
       }
     }
     .products {
+      position: relative;
       margin-top: 10px;
       .product-title {
         font-size: 28px;
