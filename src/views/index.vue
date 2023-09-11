@@ -94,6 +94,7 @@ export default {
   min-height: 100vh;
   background: linear-gradient(180deg, #1c1e1f, #0a0f14);
   color: white;
+  user-select: none;
   .container {
     position: relative;
     width: 375px;
