@@ -45,6 +45,7 @@
 import douyin from '@/assets/images/douyin.png'
 import bilibili from '@/assets/images/bilibili.png'
 import example from '@/assets/images/example.png'
+import nimble from '@/assets/images/nimble.png'
 import adarkroom from '@/assets/images/adarkroom.jpg'
 import islands from '@/assets/images/islands.gif'
 
@@ -69,6 +70,11 @@ export default {
           open: 'https://space.bilibili.com/13310258',
           text: '哔哩哔哩',
           icon: bilibili,
+        },
+        {
+          link: '/nimble',
+          text: '灵动Canvas',
+          icon: nimble,
         },
       ],
       products: [
@@ -134,7 +140,7 @@ export default {
         cursor: pointer;
         border: 0.5px solid #36393b;
         background: #1c1f21;
-        flex: 1;
+        width: calc(33.33% - 7px);
         aspect-ratio: 1 / 1;
         border-radius: 20px;
         padding: 15px;
@@ -142,6 +148,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex-shrink: 0;
         &:nth-child(3n) {
           margin: 0 0 10px 0;
         }
