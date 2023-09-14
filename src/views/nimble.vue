@@ -82,11 +82,13 @@ export default {
       gradient.addColorStop(1, '#667af9')
       context.strokeStyle = gradient
 
+      const preloadOffset = 15 // 预生成的偏移值，防止进入视口时还未生成
+
       const drawMap = (x = 0) => {
-        const p0 = [x + size * 0, h * 0.5]
-        const p1 = [x + size * 0.4, h * 0.5 - waveHeight]
-        const p2 = [x + size * 0.6, h * 0.5 + waveHeight]
-        const p3 = [x + size * 1, h * 0.5]
+        const p0 = [x + size * 0 + preloadOffset, h * 0.5]
+        const p1 = [x + size * 0.4 + preloadOffset, h * 0.5 - waveHeight]
+        const p2 = [x + size * 0.6 + preloadOffset, h * 0.5 + waveHeight]
+        const p3 = [x + size * 1 + preloadOffset, h * 0.5]
 
         context.moveTo(...p0)
         context.bezierCurveTo(...p1, ...p2, ...p3)
