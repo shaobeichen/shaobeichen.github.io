@@ -5,46 +5,22 @@
     <div class="control">
       <div>高度</div>
       <br />
-      <van-slider
-        v-model="config.waveHeight"
-        :min="0"
-        :max="500"
-        :step="10"
-        bar-height="6px"
-      />
+      <el-slider v-model="config.waveHeight" :min="0" :max="500" :step="10" />
       <br />
 
       <div>速度</div>
       <br />
-      <van-slider
-        v-model="config.speed"
-        :min="0"
-        :max="10"
-        :step="1"
-        bar-height="6px"
-      />
+      <el-slider v-model="config.speed" :min="0" :max="10" :step="1" />
       <br />
 
       <div>线宽</div>
       <br />
-      <van-slider
-        v-model="config.lineWidth"
-        :min="1"
-        :max="100"
-        :step="1"
-        bar-height="6px"
-      />
+      <el-slider v-model="config.lineWidth" :min="1" :max="100" :step="1" />
       <br />
 
       <div>密度</div>
       <br />
-      <van-slider
-        v-model="config.size"
-        :min="100"
-        :max="500"
-        :step="10"
-        bar-height="6px"
-      />
+      <el-slider v-model="config.size" :min="100" :max="500" :step="10" />
       <br />
     </div>
   </div>
