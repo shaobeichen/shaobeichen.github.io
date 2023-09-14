@@ -22,6 +22,10 @@
       <br />
       <el-slider v-model="config.size" :min="100" :max="500" :step="10" />
       <br />
+
+      <div>CPU: 70%</div>
+      <div>内存：120M</div>
+      <div>表现：反复切换数据后卡顿</div>
     </div>
   </div>
 </template>
@@ -38,6 +42,7 @@ export default {
         speed: 1,
         lineWidth: 30,
       },
+      initCount: 0, // 为了解决多次初始化后，前面的初始化还继续运行的问题
     }
   },
   watch: {
@@ -67,12 +72,16 @@ export default {
       const speed = c.speed
       const lineWidth = c.lineWidth
 
+      this.initCount++
+      const currentInitIndex = this.initCount
+
       const canvas = document.querySelector('#canvas')
       if (!canvas) return
       canvas.width = w
       canvas.height = h
 
       const context = canvas.getContext('2d')
+      context.clearRect(0, 0, w, h)
       context.lineWidth = lineWidth
       context.lineCap = 'round'
       context.lineJoin = 'round'
@@ -99,6 +108,7 @@ export default {
 
       let time = 0
       const draw = () => {
+        if (currentInitIndex < this.initCount) return
         requestAnimationFrame(draw)
 
         context.clearRect(0, 0, w, h)
