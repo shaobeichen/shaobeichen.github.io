@@ -1,8 +1,6 @@
 <template>
   <div class="page">
     <div class="container">
-      <img :src="icon.islands" class="islands" />
-
       <div class="title">
         <div class="welcome">Welcome Back,</div>
         <div class="name">我是少北晨</div>
@@ -47,14 +45,10 @@ import bilibili from '@/assets/images/bilibili.png'
 import example from '@/assets/images/example.png'
 import nimble from '@/assets/images/nimble.png'
 import adarkroom from '@/assets/images/adarkroom.jpg'
-import islands from '@/assets/images/islands.gif'
 
 export default {
   data() {
     return {
-      icon: {
-        islands,
-      },
       list: [
         {
           link: '/posts/home',
