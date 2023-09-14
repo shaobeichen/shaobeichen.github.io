@@ -22,10 +22,6 @@
       <br />
       <el-slider v-model="config.size" :min="100" :max="500" :step="10" />
       <br />
-
-      <div>CPU: 70%</div>
-      <div>内存：120M</div>
-      <div>表现：反复切换数据后卡顿</div>
     </div>
   </div>
 </template>
