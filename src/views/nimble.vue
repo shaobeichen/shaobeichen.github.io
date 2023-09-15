@@ -36,9 +36,9 @@ export default {
         waveHeight: 250,
         size: 300,
         speed: 1,
-        lineWidth: 30,
+        lineWidth: 10,
       },
-      initCount: 0, // 为了解决多次初始化后，前面的初始化还继续运行的问题
+      initIndex: 0, // 为了解决多次初始化后，前面的初始化还继续运行的问题
     }
   },
   watch: {
@@ -68,8 +68,8 @@ export default {
       const speed = c.speed
       const lineWidth = c.lineWidth
 
-      this.initCount++
-      const currentInitIndex = this.initCount
+      this.initIndex++
+      const currentInitIndex = this.initIndex
 
       const canvas = document.querySelector('#canvas')
       if (!canvas) return
@@ -82,10 +82,15 @@ export default {
       context.lineCap = 'round'
       context.lineJoin = 'round'
 
-      const gradient = context.createLinearGradient(0, h / 2, w, h / 2)
-      gradient.addColorStop(0, '#6730eb')
-      gradient.addColorStop(1, '#667af9')
-      context.strokeStyle = gradient
+      const strokeGradient = context.createLinearGradient(w / 2, 0, w / 2, h)
+      strokeGradient.addColorStop(0, '#1890FF')
+      strokeGradient.addColorStop(1, '#f7f7f7')
+      context.strokeStyle = strokeGradient
+
+      const fillGradient = context.createLinearGradient(w / 2, 0, w / 2, h)
+      fillGradient.addColorStop(0, '#ebf4fe')
+      fillGradient.addColorStop(1, '#ffffff')
+      context.fillStyle = fillGradient
 
       const preloadOffset = 15 // 预生成的偏移值，防止进入视口时还未生成
 
@@ -104,14 +109,22 @@ export default {
 
       let time = 0
       const draw = () => {
-        if (currentInitIndex < this.initCount) return
+        if (currentInitIndex < this.initIndex) return
         requestAnimationFrame(draw)
 
         context.clearRect(0, 0, w, h)
         time -= speed
         context.beginPath()
         drawMap(time)
+        // 这里设置lineWidth是为了防止动画过程中画面中出现closePath的线条
+        context.lineTo(w, h)
+        context.lineTo(-lineWidth, h)
+        context.lineTo(-lineWidth, h * 0.5)
+        context.moveTo(-lineWidth, h * 0.5)
+        context.closePath()
+
         context.stroke()
+        context.fill()
       }
 
       requestAnimationFrame(draw)
