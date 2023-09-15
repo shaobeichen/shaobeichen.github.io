@@ -88,7 +88,7 @@ export default {
       context.strokeStyle = strokeGradient
 
       const fillGradient = context.createLinearGradient(w / 2, 0, w / 2, h)
-      fillGradient.addColorStop(0, '#ebf4fe')
+      fillGradient.addColorStop(0, '#b8daff')
       fillGradient.addColorStop(1, '#ffffff')
       context.fillStyle = fillGradient
 
