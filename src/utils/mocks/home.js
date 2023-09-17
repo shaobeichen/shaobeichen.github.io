@@ -1,5 +1,11 @@
 export default [
   {
+    link: '/posts/p80',
+    chapter: '第八十期',
+    tags: ['实战技巧'],
+    title: '程序员如何识别一家垃圾公司？',
+  },
+  {
     link: '/posts/p73',
     chapter: '第七十三期',
     tags: ['实战技巧'],
