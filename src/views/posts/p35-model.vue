@@ -27,7 +27,6 @@ export default {
           const value = e.target.value
           context[bindings.expression] = value
           // this.first = value
-          debugger
         }
       },
     },

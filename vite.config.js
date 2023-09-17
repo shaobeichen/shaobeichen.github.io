@@ -12,7 +12,7 @@ import {
 } from 'unplugin-vue-components/resolvers'
 
 import AddLogo from './plugins/vite-plugin-add-logo'
-import Test from './plugins/vite-plugin-test'
+import RemoveConsole from './plugins/vite-plugin-remove-console'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,8 +29,8 @@ export default defineConfig({
   },
   plugins: [
     Inspect(),
+    RemoveConsole(),
     AddLogo(),
-    Test(),
     vue(),
     AutoImport({
       resolvers: [ElementPlusResolver()],
