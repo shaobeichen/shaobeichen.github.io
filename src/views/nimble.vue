@@ -117,8 +117,8 @@ export default {
         context.beginPath()
         drawMap(time)
         // 这里设置lineWidth是为了防止动画过程中画面中出现closePath的线条
-        context.lineTo(w, h)
-        context.lineTo(-lineWidth, h)
+        context.lineTo(w + lineWidth, h + lineWidth)
+        context.lineTo(-lineWidth, h + lineWidth)
         context.lineTo(-lineWidth, h * 0.5)
         context.moveTo(-lineWidth, h * 0.5)
         context.closePath()
