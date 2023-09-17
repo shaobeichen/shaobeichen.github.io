@@ -36,6 +36,12 @@
           </div>
         </div>
       </div>
+
+      <div class="footer">
+        <span id="busuanzi_container_site_pv"
+          >本站总访问量：<span id="busuanzi_value_site_pv"></span
+        ></span>
+      </div>
     </div>
   </div>
 </template>
@@ -227,6 +233,10 @@ export default {
           }
         }
       }
+    }
+    .footer {
+      margin-top: 100px;
+      text-align: center;
     }
   }
 }
