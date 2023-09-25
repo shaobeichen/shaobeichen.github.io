@@ -1,19 +1,19 @@
 <template>
   <div class="stepper">
-    <button class="minus" :class="{ disable: minusDisable }" @click="minus">-</button>
-    <div class="number" v-text="value" />
-    <button class="plus" :class="{ disable: plusDisable }" @click="plus">+</button>
+    <button class="minus" :class="{ disable: minusDisable }" @click="minus">
+      -
+    </button>
+    <div class="number" v-text="modelValue" />
+    <button class="plus" :class="{ disable: plusDisable }" @click="plus">
+      +
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-  model: {
-    prop: 'value',
-    event: 'change',
-  },
   props: {
-    value: {
+    modelValue: {
       type: Number,
       default: 1,
     },
@@ -31,21 +31,21 @@ export default {
   },
   computed: {
     minusDisable() {
-      return this.min >= this.value
+      return this.min >= this.modelValue
     },
     plusDisable() {
-      return this.max <= this.value
+      return this.max <= this.modelValue
     },
   },
   methods: {
     minus() {
       if (!this.minusDisable) {
-        this.$emit('change', this.value - 1)
+        this.$emit('update:model-value', this.modelValue - 1)
       }
     },
     plus() {
       if (!this.plusDisable) {
-        this.$emit('change', this.value + 1)
+        this.$emit('update:model-value', this.modelValue + 1)
       }
     },
   },

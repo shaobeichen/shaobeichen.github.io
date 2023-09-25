@@ -8,32 +8,32 @@
       </div>
 
       <div class="list">
-        <div
+        <sh-link
           v-for="(item, index) in list"
           :key="index"
           class="item"
-          @click="linkTo(item)"
+          :url="item.url"
         >
           <img class="icon" :src="item.icon" />
           <div class="text">{{ item.text }}</div>
-        </div>
+        </sh-link>
       </div>
 
       <div class="products">
         <div class="product-title">My Recommend</div>
         <div class="product-list">
-          <div
-            class="product-item"
+          <sh-link
             v-for="(item, index) in products"
             :key="index"
-            @click="linkTo(item)"
+            class="product-item"
+            :url="item.url"
           >
             <div
               class="product-item-background"
               :style="{ backgroundImage: `url(${item.icon})` }"
-            ></div>
+            />
             <div class="product-item-text">{{ item.text }}</div>
-          </div>
+          </sh-link>
         </div>
       </div>
 
@@ -48,6 +48,7 @@
 <script>
 import douyin from '@/assets/images/douyin.png'
 import bilibili from '@/assets/images/bilibili.png'
+import github from '@/assets/images/github.png'
 import example from '@/assets/images/example.png'
 import nimble from '@/assets/images/nimble.png'
 import adarkroom from '@/assets/images/adarkroom.jpg'
@@ -57,40 +58,40 @@ export default {
     return {
       list: [
         {
-          link: '/posts/home',
-          text: '代码案例',
-          icon: example,
+          url: 'https://github.com/shaobeichen',
+          text: 'Github',
+          icon: github,
         },
         {
-          open: 'https://www.douyin.com/user/MS4wLjABAAAAGFwkGb3S8UPIB7FhtK7K6n-nCFnPbTTth4HZ2I6Wbv0',
+          url: 'https://space.bilibili.com/13310258',
+          text: '哔哩哔哩',
+          icon: bilibili,
+        },
+
+        {
+          url: 'https://www.douyin.com/user/MS4wLjABAAAAGFwkGb3S8UPIB7FhtK7K6n-nCFnPbTTth4HZ2I6Wbv0',
           text: '抖音',
           icon: douyin,
         },
         {
-          open: 'https://space.bilibili.com/13310258',
-          text: '哔哩哔哩',
-          icon: bilibili,
+          url: '/posts/home',
+          text: '代码案例',
+          icon: example,
         },
         {
-          link: '/nimble',
+          url: '/nimble',
           text: '灵动Canvas',
           icon: nimble,
         },
       ],
       products: [
         {
-          open: '/room/index.html',
+          url: '/room/index.html',
           text: '小黑屋',
           icon: adarkroom,
         },
       ],
     }
-  },
-  methods: {
-    linkTo(item) {
-      if (item.open) window.open(item.open)
-      else if (item.link) this.$router.push(item.link)
-    },
   },
 }
 </script>
@@ -204,6 +205,7 @@ export default {
           font-size: 24px;
           position: relative;
           overflow: hidden;
+          display: block;
           &:hover {
             .product-item-background {
               filter: brightness(1);

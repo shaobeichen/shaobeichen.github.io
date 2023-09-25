@@ -34,12 +34,13 @@ export default {
       else this.enableScroll()
     },
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.enableScroll()
   },
   methods: {
     disableScroll() {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth
       document.body.style.paddingRight = scrollbarWidth + 'px'
 
       // innerWidth 浏览器窗口宽度，包含滚动条

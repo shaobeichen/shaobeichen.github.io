@@ -1,7 +1,7 @@
 <template>
   <div class="v-model">
     <button @click="show = true">显示弹窗</button>
-    <sh-dialog v-model="show" />
+    <sh-dialog v-model:show="show" />
     <!-- <sh-dialog :show="show" @change="val => (show = val)" />  -->
   </div>
 </template>
