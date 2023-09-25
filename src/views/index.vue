@@ -123,7 +123,10 @@ export default {
         color: white;
       }
       .name {
-        color: #f1a194;
+        background: linear-gradient(90deg, #ff5d5f, #f8cb0b);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         padding-bottom: 10px;
       }
       .shine {
