@@ -11,5 +11,6 @@
   ],
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "commentTranslate.hover.enabled": false
 }
