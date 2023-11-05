@@ -43,7 +43,7 @@ export default {
         this.areaInfo.top = e.clientY
       })
       window.addEventListener('mousemove', e => {
-        const { startX, startY } = this.areaInfo
+        const { startX, startY, top, left } = this.areaInfo
         if (!startX) return
 
         const { clientX, clientY } = e
@@ -53,6 +53,10 @@ export default {
 
         if (clientY < startY) this.areaInfo.top = clientY
         if (clientX < startX) this.areaInfo.left = clientX
+
+        // 解决快速拖动导致的起点偏移问题
+        if (clientY > startY && top < startY) this.areaInfo.top = startY
+        if (clientX > startX && left < startX) this.areaInfo.left = startX
       })
       window.addEventListener('mouseup', () => {
         this.areaInfo = {}
