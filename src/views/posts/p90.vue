@@ -88,6 +88,16 @@ export default {
         if (clientY > startY && top < startY) this.areaInfo.top = startY
         if (clientX > startX && left < startX) this.areaInfo.left = startX
 
+        // this.list.forEach((v, i) => {
+        //   if (
+        //     v.left > left &&
+        //     v.left + v.width < clientX &&
+        //     v.top > top &&
+        //     v.top + v.height < clientY
+        //   )
+        //     this.list[i].selected = true
+        // })
+
         this.list.forEach((v, i) => {
           if (
             v.left > left &&
