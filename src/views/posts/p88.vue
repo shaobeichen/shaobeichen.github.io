@@ -2,15 +2,7 @@
   <div class="container">
     <div class="area" :style="areaStyle"></div>
     <div class="list">
-      <div
-        v-for="item in list"
-        :key="item.id"
-        class="item"
-        :class="{ selected: item.selected }"
-        ref="item"
-      >
-        {{ item.id }}
-      </div>
+      <div v-for="item in list" :key="item" class="item">{{ item }}</div>
     </div>
   </div>
 </template>
@@ -19,18 +11,7 @@
 export default {
   data() {
     return {
-      list: [
-        { id: 1, selected: false },
-        { id: 2, selected: false },
-        { id: 3, selected: false },
-        { id: 4, selected: false },
-        { id: 5, selected: false },
-        { id: 6, selected: false },
-        { id: 7, selected: false },
-        { id: 8, selected: false },
-        { id: 9, selected: false },
-        { id: 10, selected: false },
-      ],
+      list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       areaInfo: {},
     }
   },
@@ -51,20 +32,9 @@ export default {
     },
   },
   mounted() {
-    this.getItemPosition()
     this.areaListen()
   },
   methods: {
-    getItemPosition() {
-      const { list } = this
-
-      const itemDOM = this.$refs.item
-
-      this.list = list.map((v, i) => {
-        const { left, top, width, height } = itemDOM[i].getBoundingClientRect()
-        return { ...v, left, top, width, height }
-      })
-    },
     areaListen() {
       window.addEventListener('mousedown', e => {
         this.areaInfo.startX = e.clientX
@@ -73,7 +43,7 @@ export default {
         this.areaInfo.top = e.clientY
       })
       window.addEventListener('mousemove', e => {
-        const { startX, startY, top, left, width, height } = this.areaInfo
+        const { startX, startY, top, left } = this.areaInfo
         if (!startX) return
 
         const { clientX, clientY } = e
@@ -87,27 +57,6 @@ export default {
         // 解决快速拖动导致的起点偏移问题
         if (clientY > startY && top < startY) this.areaInfo.top = startY
         if (clientX > startX && left < startX) this.areaInfo.left = startX
-
-        // this.list.forEach((v, i) => {
-        //   if (
-        //     v.left > left &&
-        //     v.left + v.width < clientX &&
-        //     v.top > top &&
-        //     v.top + v.height < clientY
-        //   )
-        //     this.list[i].selected = true
-        // })
-
-        this.list.forEach((v, i) => {
-          if (
-            v.left > left &&
-            v.left + v.width < left + width &&
-            v.top > top &&
-            v.top + v.height < top + height
-          )
-            this.list[i].selected = true
-          else this.list[i].selected = false
-        })
       })
       window.addEventListener('mouseup', () => {
         this.areaInfo = {}
@@ -148,9 +97,6 @@ export default {
     color: white;
     margin-right: 10px;
     margin-bottom: 10px;
-    &.selected {
-      background: rgb(45, 218, 100);
-    }
   }
 }
 </style>
