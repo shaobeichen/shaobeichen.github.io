@@ -12,5 +12,6 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "commentTranslate.hover.enabled": false
+  "commentTranslate.hover.enabled": false,
+  "editor.fontSize": 20
 }

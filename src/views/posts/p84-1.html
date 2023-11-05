@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: grid;
+        width: 100vw; /* 容器的宽度 */
+        min-height: 100vh; /* 容器的高度 */
+        grid-template-columns: repeat(17, 1fr); /* 列数为17 */
+        grid-template-rows: repeat(8, 1fr); /* 行数为8 */
+        grid-gap: 10px; /* 方格之间的间距 */
+        /* grid-auto-flow: dense; */
+      }
+
+      .black-square {
+        background-color: black;
+        /* aspect-ratio: 1; */
+      }
+
+      /* @media (min-width: 1024px) and (max-width: 1440px) {
+        #container {
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(8, 1fr);
+        }
+      }
+
+      @media (max-width: 1023px) {
+        #container {
+          grid-template-columns: repeat(7, 1fr);
+          grid-template-rows: repeat(15, 1fr);
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      function createRandomSquares() {
+        const container = document.getElementById('container')
+        container.innerHTML = '' // 清空容器内容
+
+        const numSquares = 20 // 方格数量
+
+        for (let i = 0; i < numSquares; i++) {
+          const square = document.createElement('div')
+          square.classList.add('black-square')
+
+          const [width, height] = getRandomSize() // 随机获取方格的宽度 高度
+
+          square.style.gridColumn = `span ${width}` // 设置方格所占列数
+          square.style.gridRow = `span ${height}` // 设置方格所占行数
+
+          container.appendChild(square) // 将方格添加到容器中
+        }
+      }
+
+      function getRandomSize() {
+        const types = ['1*1', '2*2', '3*3']
+        const selected = Math.floor(Math.random() * types.length)
+        return types[selected].split('*') // 返回数组 ['1', '1']
+      }
+
+      createRandomSquares()
+    </script>
+  </body>
+</html>
