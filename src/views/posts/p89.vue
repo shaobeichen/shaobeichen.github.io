@@ -81,12 +81,15 @@ export default {
         this.areaInfo.width = Math.abs(startX - clientX)
         this.areaInfo.height = Math.abs(startY - clientY)
 
-        if (clientY < startY) this.areaInfo.top = clientY
-        if (clientX < startX) this.areaInfo.left = clientX
+        // if (clientY < startY) this.areaInfo.top = clientY
+        // if (clientX < startX) this.areaInfo.left = clientX
 
-        // 解决快速拖动导致的起点偏移问题
-        if (clientY > startY && top < startY) this.areaInfo.top = startY
-        if (clientX > startX && left < startX) this.areaInfo.left = startX
+        // if (clientY > startY && top < startY) this.areaInfo.top = startY
+        // if (clientX > startX && left < startX) this.areaInfo.left = startX
+
+        //更简单的判定方法
+        this.areaInfo.top = Math.min(startY, clientY)
+        this.areaInfo.left = Math.min(startX, clientX)
 
         // this.list.forEach((v, i) => {
         //   if (
