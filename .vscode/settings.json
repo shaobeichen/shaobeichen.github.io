@@ -13,5 +13,6 @@
     "strings": true
   },
   "commentTranslate.hover.enabled": false,
-  "editor.fontSize": 20
+  //   "editor.fontSize": 24
+  "editor.fontSize": 12
 }
