@@ -6,11 +6,15 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+import ConfigInput from './components/config/input.vue'
+import ConfigButton from './components/config/button.vue'
+
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
 
-app.mount('#app')
+app.component('config-input', ConfigInput)
+app.component('config-button', ConfigButton)
 
-console.warn(111111)
+app.mount('#app')

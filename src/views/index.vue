@@ -97,6 +97,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  font-family: 'SmileySans';
+}
 .page {
   min-height: 100vh;
   background: linear-gradient(180deg, #1c1e1f, #0a0f14);

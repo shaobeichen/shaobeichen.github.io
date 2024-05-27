@@ -7,7 +7,3 @@
   font-display: 'swap';
   src: url('./fonts/SmileySans-Oblique.ttf.woff2') format('woff2');
 }
-
-* {
-  font-family: 'SmileySans';
-}
