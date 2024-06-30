@@ -12,6 +12,6 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "editor.fontSize": 12
-  //   "editor.fontSize": 24
+  //   "editor.fontSize": 12
+  "editor.fontSize": 24
 }
