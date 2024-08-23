@@ -1,7 +1,7 @@
 export default [
   {
     link: '/posts/p89',
-    chapter: '第把十九期',
+    chapter: '第八十九期',
     tags: ['实战技巧'],
     title:
       '蚂蚁一面面试题 Vue实现10个小正方形的鼠标框选，框住的改变颜色（2）改变颜色',
