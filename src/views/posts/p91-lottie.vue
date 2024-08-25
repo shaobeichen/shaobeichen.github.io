@@ -9,7 +9,7 @@
     @click="buttonClicked"
   />
 </template>
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 import { LottieAnimation } from 'lottie-web-vue'
 import AnimatedToggle from '@/utils/mocks/AnimatedToggle.json'

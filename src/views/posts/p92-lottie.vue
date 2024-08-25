@@ -1,5 +1,9 @@
 <template>
-  <lottie-player autoplay loop />
+  <lottie-player
+    autoplay
+    loop
+    style="transform: scale(3) translate(300px, 100px)"
+  />
 </template>
 <script setup>
 import { onMounted } from 'vue'
