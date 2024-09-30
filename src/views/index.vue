@@ -45,6 +45,7 @@ import bilibili from '@/assets/images/bilibili.png'
 import github from '@/assets/images/github.png'
 import example from '@/assets/images/example.png'
 import nimble from '@/assets/images/nimble.png'
+import course from '@/assets/images/course.jpg'
 
 export default {
   data() {
@@ -78,6 +79,11 @@ export default {
         },
       ],
       products: [
+        {
+          url: 'https://www.bilibili.com/cheese/play/ss24086',
+          text: '七天从0实现低代码平台',
+          icon: course,
+        },
         {
           url: 'https://github.com/shaobeichen/gradient-theme',
           text: 'VSCode渐变主题',
