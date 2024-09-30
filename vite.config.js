@@ -6,10 +6,7 @@ import Inspect from 'vite-plugin-inspect'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import {
-  VantResolver,
-  ElementPlusResolver,
-} from 'unplugin-vue-components/resolvers'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 import AddLogo from './plugins/vite-plugin-add-logo'
 import RemoveConsole from './plugins/vite-plugin-remove-console'
@@ -36,7 +33,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
     Components({
-      resolvers: [ElementPlusResolver(), VantResolver()],
+      resolvers: [ElementPlusResolver()],
       dirs: ['src/components'],
       extensions: ['vue'],
       deep: true,
