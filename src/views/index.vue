@@ -46,6 +46,7 @@ import github from '@/assets/images/github.png'
 import example from '@/assets/images/example.png'
 import nimble from '@/assets/images/nimble.png'
 import course from '@/assets/images/course.jpg'
+import cover from '@/assets/images/cover.png'
 
 export default {
   data() {
@@ -88,6 +89,16 @@ export default {
           url: 'https://github.com/shaobeichen/gradient-theme',
           text: 'VSCode渐变主题',
           icon: 'https://raw.githubusercontent.com/shaobeichen/gradient-theme/main/images/banner.png',
+        },
+        {
+          url: 'https://cover.a-bei.cn',
+          text: '视频封面生成',
+          icon: cover,
+        },
+        {
+          url: '/html2canvas',
+          text: '书函生成',
+          icon: 'http://t13.baidu.com/it/u=3999726052,3760294060&fm=224&app=112&f=JPEG?w=500&h=257',
         },
       ],
     }
