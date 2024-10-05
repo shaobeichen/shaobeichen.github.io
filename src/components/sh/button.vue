@@ -1,5 +1,5 @@
 <template>
-  <button class="button" v-bind="$attrs" @click="click">
+  <button class="button" v-bind="$attrs">
     <slot />
   </button>
 </template>
@@ -7,11 +7,6 @@
 <script>
 export default {
   props: {},
-  methods: {
-    click(e) {
-      this.$emit('click', e)
-    },
-  },
 }
 </script>
 

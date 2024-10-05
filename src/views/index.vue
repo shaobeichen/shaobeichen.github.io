@@ -36,12 +36,6 @@
           </sh-link>
         </div>
       </div>
-
-      <div class="footer">
-        <span id="busuanzi_container_site_pv"
-          >本站总访问量：<span id="busuanzi_value_site_pv"></span
-        ></span>
-      </div>
     </div>
   </div>
 </template>
@@ -51,7 +45,7 @@ import bilibili from '@/assets/images/bilibili.png'
 import github from '@/assets/images/github.png'
 import example from '@/assets/images/example.png'
 import nimble from '@/assets/images/nimble.png'
-import adarkroom from '@/assets/images/adarkroom.jpg'
+import course from '@/assets/images/course.jpg'
 
 export default {
   data() {
@@ -86,9 +80,14 @@ export default {
       ],
       products: [
         {
-          url: '/room/index.html',
-          text: '小黑屋',
-          icon: adarkroom,
+          url: 'https://www.bilibili.com/cheese/play/ss24086',
+          text: '七天从0实现低代码平台',
+          icon: course,
+        },
+        {
+          url: 'https://github.com/shaobeichen/gradient-theme',
+          text: 'VSCode渐变主题',
+          icon: 'https://raw.githubusercontent.com/shaobeichen/gradient-theme/main/images/banner.png',
         },
       ],
     }
@@ -214,7 +213,7 @@ export default {
           display: block;
           &:hover {
             .product-item-background {
-              filter: brightness(1);
+              filter: brightness(0.8);
             }
             .product-item-text {
               opacity: 0.5;
@@ -224,7 +223,8 @@ export default {
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-position: center center;
+            background-size: cover;
             transition: all 0.3s linear;
             filter: brightness(0.3);
             position: absolute;
@@ -241,10 +241,6 @@ export default {
           }
         }
       }
-    }
-    .footer {
-      margin-top: 100px;
-      text-align: center;
     }
   }
 }
