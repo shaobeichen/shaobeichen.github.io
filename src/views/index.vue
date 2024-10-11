@@ -48,7 +48,7 @@ import github from '@/assets/images/github.png'
 import example from '@/assets/images/example.png'
 import nimble from '@/assets/images/nimble.png'
 import course from '@/assets/images/course.jpg'
-import cover from '@/assets/images/cover.png'
+import cover from '@/assets/images/cover.jpg'
 
 export default {
   data() {
