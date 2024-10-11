@@ -11,3 +11,8 @@
 .v-leave-to {
   opacity: 0;
 }
+
+@font-face {
+  font-family: 'SmileySans';
+  src: url('./fonts/SmileySans-Oblique-2.ttf') format('ttf');
+}

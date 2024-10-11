@@ -1,5 +1,5 @@
 import './assets/main.css'
-import './assets/fonts/SmileySans-Oblique/font.css'
+// import './assets/fonts/SmileySans-Oblique/font.css'
 import 'animate.css'
 
 import { createApp } from 'vue'
