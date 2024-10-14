@@ -7,16 +7,8 @@
     <style>
       #container {
         display: grid;
-        width: 100vw; /* 容器的宽度 */
-        min-height: 100vh; /* 容器的高度 */
-        grid-template-columns: repeat(17, 1fr); /* 列数为17 */
-        grid-template-rows: repeat(8, 1fr); /* 行数为8 */
-        grid-gap: 10px; /* 方格之间的间距 */
-        grid-auto-flow: dense;
-      }
-
-      .black-square {
-        background-color: black;
+        grid-template-columns: repeat(17, 1fr);
+        grid-template-rows: repeat(8, 1fr);
       }
     </style>
   </head>
@@ -25,10 +17,8 @@
     <script>
       function createRandomSquares() {
         const container = document.getElementById('container')
-        container.innerHTML = '' // 清空容器内容
-
-        const numSquares = 20 // 方格数量
-
+        container.innerHTML = ''
+        const numSquares = 20
         for (let i = 0; i < numSquares; i++) {
           const square = document.createElement('div')
           square.classList.add('black-square')
