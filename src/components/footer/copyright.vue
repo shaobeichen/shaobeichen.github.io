@@ -4,9 +4,6 @@
     <div class="text">
       主题参考
       <a href="https://blog.zhheo.com" class="link" target="_blank">HEO</a>
-      <!-- <span id="busuanzi_container_site_pv">
-        访问量：<span id="busuanzi_value_site_pv"></span>
-      </span> -->
     </div>
   </div>
 </template>

@@ -1,42 +1,44 @@
 <template>
   <div class="page">
-    <div class="container">
-      <div class="title">
-        <div class="welcome">Welcome Back,</div>
-        <div class="name">我是少北晨</div>
-        <div class="shine" />
-      </div>
+    <transition>
+      <div v-if="!isLoading" class="container">
+        <div class="title">
+          <div class="welcome">Welcome Back,</div>
+          <div class="name">我是少北晨</div>
+          <div class="shine" />
+        </div>
 
-      <div class="list">
-        <sh-link
-          v-for="(item, index) in list"
-          :key="index"
-          class="item"
-          :url="item.url"
-        >
-          <img class="icon" :src="item.icon" />
-          <div class="text">{{ item.text }}</div>
-        </sh-link>
-      </div>
-
-      <div class="products">
-        <div class="product-title">My Recommend</div>
-        <div class="product-list">
+        <div class="list">
           <sh-link
-            v-for="(item, index) in products"
+            v-for="(item, index) in list"
             :key="index"
-            class="product-item"
+            class="item"
             :url="item.url"
           >
-            <div
-              class="product-item-background"
-              :style="{ backgroundImage: `url(${item.icon})` }"
-            />
-            <div class="product-item-text">{{ item.text }}</div>
+            <img class="icon" :src="item.icon" />
+            <div class="text">{{ item.text }}</div>
           </sh-link>
         </div>
+
+        <div class="products">
+          <div class="product-title">My Recommend</div>
+          <div class="product-list">
+            <sh-link
+              v-for="(item, index) in products"
+              :key="index"
+              class="product-item"
+              :url="item.url"
+            >
+              <div
+                class="product-item-background"
+                :style="{ backgroundImage: `url(${item.icon})` }"
+              />
+              <div class="product-item-text">{{ item.text }}</div>
+            </sh-link>
+          </div>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 <script>
@@ -46,7 +48,7 @@ import github from '@/assets/images/github.png'
 import example from '@/assets/images/example.png'
 import nimble from '@/assets/images/nimble.png'
 import course from '@/assets/images/course.jpg'
-import cover from '@/assets/images/cover.png'
+import cover from '@/assets/images/cover.jpg'
 
 export default {
   data() {
@@ -101,7 +103,13 @@ export default {
           icon: 'http://t13.baidu.com/it/u=3999726052,3760294060&fm=224&app=112&f=JPEG?w=500&h=257',
         },
       ],
+      isLoading: true,
     }
+  },
+  created() {
+    setTimeout(() => {
+      this.isLoading = false
+    }, 40)
   },
 }
 </script>
